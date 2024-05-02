@@ -1,6 +1,15 @@
 {
   description = "Nix package, NixOS module and VM integration test for authentik";
 
+  nixConfig = {
+    extra-substituters = [
+      "https://authentik-nix-fpletz.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "authentik-nix-fpletz.cachix.org-1:sK79KZjLT60avOQ8JODmZ4y3pZlJinxn9zBfavUd9hI="
+    ];
+  };
+
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
     flake-parts.url = "github:hercules-ci/flake-parts";
