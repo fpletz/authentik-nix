@@ -1,6 +1,7 @@
-{ pkgs
-, authentik-version
-, nixosModules
+{
+  pkgs,
+  authentik-version,
+  nixosModules,
 }:
 let
   # use a root-owned EnvironmentFile in production instead (services.authentik.environmentFile)

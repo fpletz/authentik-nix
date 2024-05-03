@@ -1,12 +1,11 @@
-{ authentik-src
-, authentikComponents
-, makeWrapper
-, runCommandLocal
+{
+  authentik-src,
+  authentikComponents,
+  makeWrapper,
+  runCommandLocal,
 }:
 
-runCommandLocal "authentik-migrate.py" {
-  nativeBuildInputs = [ makeWrapper ];
-} ''
+runCommandLocal "authentik-migrate.py" { nativeBuildInputs = [ makeWrapper ]; } ''
   mkdir -vp $out/bin
   cp ${authentik-src}/lifecycle/migrate.py $out/bin/migrate.py
   chmod +w $out/bin/migrate.py

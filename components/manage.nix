@@ -1,12 +1,11 @@
-{ authentik-src
-, authentikComponents
-, makeWrapper
-, runCommandLocal
+{
+  authentik-src,
+  authentikComponents,
+  makeWrapper,
+  runCommandLocal,
 }:
 
-runCommandLocal "authentik-manage" {
-  nativeBuildInputs = [ makeWrapper ];
-} ''
+runCommandLocal "authentik-manage" { nativeBuildInputs = [ makeWrapper ]; } ''
   mkdir -vp $out/bin
   cp -v ${authentik-src}/manage.py $out/bin/manage.py
 

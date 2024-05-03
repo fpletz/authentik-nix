@@ -1,7 +1,8 @@
-{ authentik-src
-, authentik-version
-, buildNapalmPackage
-, nodejs_20
+{
+  authentik-src,
+  authentik-version,
+  buildNapalmPackage,
+  nodejs_20,
 }:
 
 buildNapalmPackage "${authentik-src}/website" {

@@ -1,9 +1,10 @@
-{ authentik-src
-, authentik-version
-, authentikComponents
-, buildNapalmPackage
-, nodejs_21
-, applyPatches
+{
+  authentik-src,
+  authentik-version,
+  authentikComponents,
+  buildNapalmPackage,
+  nodejs_21,
+  applyPatches,
 }:
 let
   patched-src = applyPatches {
